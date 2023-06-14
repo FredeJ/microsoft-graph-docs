@@ -17,7 +17,6 @@ The Microsoft Graph security API provides a unified interface and schema to inte
 - Pull and investigate all incidents and alerts from services that are part of or integrated with Microsoft 365 Defender.
 - Unlock contextual data to inform investigations.
 - Automate security tasks, business processes, workflows, and reporting.
-- Send threat indicators to Microsoft products for customized detections.
 - Invoke actions to in response to new threats.
 - Provide visibility into security data to enable proactive risk management.
 
