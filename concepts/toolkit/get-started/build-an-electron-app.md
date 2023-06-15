@@ -108,15 +108,16 @@ const config: MsalElectronConfig = {
 ElectronAuthenticator.initialize(config);
 ```
 
-### Set nodeIntegration to true
+### Set nodeIntegration and contextIsolation
  
-In main.ts, where the new instance of BrowserWindow is created, make sure that you set `nodeIntegration` to `true` under webPreferences. If you skip this step, you might run into a ```Uncaught ReferenceError: require is not defined``` error. To keep this simple, remove any preloading scripts.
+In main.ts, where the new instance of BrowserWindow is created, make sure that you set `nodeIntegration` to `true` and `contextIsolation` to `false` under webPreferences. If you skip this step, you might run into a ```Uncaught ReferenceError: require is not defined``` error. To keep this simple, remove any preloading scripts.
 
 ```ts
 const mainWindow = new BrowserWindow({
   height: 600,
   webPreferences: {
-    nodeIntegration: true //Set this to true
+    nodeIntegration: true, //Set this to true
+    contextIsolation: false // Set this to false
   },
   width: 800
 });
